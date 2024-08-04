@@ -13,7 +13,7 @@ class Pizza:
         print(f"Pizza parts: {', '.join(self.parts)}")
 
 
-# Create the Builder interface
+# Create the Builder interface -> defines the building steps
 class PizzaBuilder(ABC):
     @property
     @abstractmethod
@@ -37,7 +37,7 @@ class PizzaBuilder(ABC):
         pass
 
 
-# Implement a Concrete Builder
+# Implement a Concrete Builder -> is a concrete implementation that builds a specific type of pizza
 class MargheritaPizzaBuilder(PizzaBuilder):
     def __init__(self) -> None:
         self.reset()
@@ -64,7 +64,7 @@ class MargheritaPizzaBuilder(PizzaBuilder):
         self._pizza.add("Basil")
 
 
-# Create a Director class
+# Create a Director class -> controls the construction process.
 class PizzaDirector:
     def __init__(self) -> None:
         self._builder = None
