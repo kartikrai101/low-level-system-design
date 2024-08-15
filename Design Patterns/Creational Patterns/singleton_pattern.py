@@ -39,3 +39,6 @@ if __name__ == "__main__":
     else:
         print("Different instances of database connection.")
 
+
+# Examples of systems that implement the Singleton Pattern are:
+# 1. ParkingLot -> to ensure only one instance of the parking lot exists. It maintains a list of levels and provides methods to park and unpark vehicles.
